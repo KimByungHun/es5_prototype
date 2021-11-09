@@ -69,17 +69,13 @@ $box3.on("click",function(){
 */
 
 
-//생성자함수로 부터 box1이라는 인스턴스 복사
-//간단하게 이느턴스를 복사하기만 하면 변수와 이벤트를 한번에 연결가능
-var box1 = new Box(".box1");
-var box2 = new Box(".box2");
-var box3 = new Box(".box3");
+//------------------------------------------------
 
 //파라미터로 선택자 문자열을 받고
 function Box(el){
 
     //해당 문자열로 제이쿼리 선택자로 감싸고 DOM을 선택한다음
-    //해당 DOM요소를 앞으로 복사가될 복사본 인스턴스에 $box라는 키값에 담아서 전달
+    //해당 DOM요소를 앞으로 복사가될 복사본 인스턴스에 selector라는 키값에 담아서 전달
     this.selector = $(el);
     
     console.log(this);
@@ -90,6 +86,8 @@ function Box(el){
     })
 }
 
-function changeBg(el){
-    el.css({backgroundColor : "hotpink"});
-}
+//생성자함수로 부터 box1이라는 인스턴스 복사
+//간단하게 이느턴스를 복사하기만 하면 변수와 이벤트를 한번에 연결가능
+var box1 = new Box(".box1");
+var box2 = new Box(".box2");
+var box3 = new Box(".box3");
